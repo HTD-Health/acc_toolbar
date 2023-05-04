@@ -7,6 +7,7 @@ function MicAccessTool(init) {
   	contact: '',
   	buttonPosition: 'left',
   	forceLang: '',
+	reportLink: '',
 	};
 
 	this.locale = @@include("language.json");
@@ -420,6 +421,11 @@ MicAccessTool.prototype.initialApp = function() {
 	if (this.init.buttonPosition === 'right') {
 		document.getElementById('mic-access-tool-general-button').classList.add('mic-access-tool-general-button-right');
 		document.getElementById('mic-access-tool-box').classList.add('mic-access-tool-box-right');
+	}
+	if (this.init.reportLink) {
+		var initLink = document.getElementById('mic-toolbox-link-contact') || {};
+		initLink.classList.remove('atb-hide-if-empty');
+		initLink.href = this.init.reportLink;
 	}
 }
 
