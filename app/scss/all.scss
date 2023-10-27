@@ -324,13 +324,6 @@ span.mic-toolbox-images-titles {
 
 	// SMALL SCREENS
 	@media screen and (max-width: 47em) {
-		.mic-access-tool-general-button {
-			> div {
-				span {
-					display: none;
-				}
-			}
-		}
 		.mic-disable-buttons {
 			display: none;
 		}
