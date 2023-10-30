@@ -54,8 +54,8 @@ span.mic-toolbox-images-titles {
 	position: fixed !important;
 	z-index: 99999 !important;
 	display: block !important;
-	bottom: 7px;
-	left: 7px;
+	bottom: 14px;
+	left: 14px;
 	cursor: pointer;
 	padding: 0;
 	img {
@@ -64,7 +64,7 @@ span.mic-toolbox-images-titles {
 	}
 	&.mic-access-tool-general-button-right {
 		left: auto;
-		right: 7px;
+		right: 14px;
 	}
 }
 
@@ -191,7 +191,7 @@ span.mic-toolbox-images-titles {
 					background-color: #fffff3;
 					span {
 						color: darkred !important;
-						font-weight: bold; 
+						font-weight: bold;
 					}
 					&::before {
 						content: "\\2713";
@@ -251,7 +251,7 @@ span.mic-toolbox-images-titles {
 					}
 				}
 			}
-			
+
 			button {
 				cursor: pointer;
 				display: inline-block;
@@ -284,7 +284,7 @@ span.mic-toolbox-images-titles {
 					border: dashed 1px darkred;
 					background-color: #fffff3;
 					span {
-						color: darkred !important; 
+						color: darkred !important;
 					}
 					&::before {
 						content: "\\2713";
@@ -349,8 +349,8 @@ body.mic-toolbox-contrast-monochrome {
 }
 
 // CONTRAST WHITE
-body.mic-toolbox-contrast-soft, 
-body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool), 
+body.mic-toolbox-contrast-soft,
+body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool),
 body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool) *:not(img), {
 	color: Black !important;
   background: transparent !important;
@@ -367,7 +367,7 @@ body.mic-toolbox-contrast-hard > :not(#mic-init-access-tool) {
 body.mic-toolbox-disable-buttons-animations * {
 	transition-property: none !important;
 	animation: none !important;
-	animation-name: none !important;	
+	animation-name: none !important;
 }
 
 // KEYBOARD SERFING
