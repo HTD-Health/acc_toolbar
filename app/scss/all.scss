@@ -54,47 +54,17 @@ span.mic-toolbox-images-titles {
 	position: fixed !important;
 	z-index: 99999 !important;
 	display: block !important;
-	bottom: 7px;
-	left: 7px;
-	background-color: #17384c;
+	bottom: 14px;
+	left: 14px;
 	cursor: pointer;
-	border: solid 2px white;
-	// border-left: none;
-	border-radius: 4px 4px 20px 4px;
-	color: #fff;
 	padding: 0;
-	> div {
-		font-size: 0 !important;
-		position: relative;
-		text-align: center;
-		padding: 4px 6px !important;
-		span {
-			display: block;
-			margin-bottom: 4px;
-			line-height: 1;
-			font-weight: bold;
-			font-size: 11px !important;
-			font-family: Arial, Helvetica, sans-serif !important;
-		}
-		img {
-			display: inline-block;
-			max-width: 32px;
-		}
+	img {
+		display: inline-block;
+		max-width: 60px;
 	}
 	&.mic-access-tool-general-button-right {
 		left: auto;
-		right: 7px;
-		// border-right: none;
-		// border: solid 2px white;
-		border-radius: 4px 4px 4px 20px;
-	}
-	&:focus, &:hover {
-		span {
-			color: darkred;
-		}
-		color: darkred;
-		border-color: darkred;
-		background-color: #ffffcc;
+		right: 14px;
 	}
 }
 
@@ -221,7 +191,7 @@ span.mic-toolbox-images-titles {
 					background-color: #fffff3;
 					span {
 						color: darkred !important;
-						font-weight: bold; 
+						font-weight: bold;
 					}
 					&::before {
 						content: "\\2713";
@@ -281,7 +251,7 @@ span.mic-toolbox-images-titles {
 					}
 				}
 			}
-			
+
 			button {
 				cursor: pointer;
 				display: inline-block;
@@ -314,7 +284,7 @@ span.mic-toolbox-images-titles {
 					border: dashed 1px darkred;
 					background-color: #fffff3;
 					span {
-						color: darkred !important; 
+						color: darkred !important;
 					}
 					&::before {
 						content: "\\2713";
@@ -354,13 +324,6 @@ span.mic-toolbox-images-titles {
 
 	// SMALL SCREENS
 	@media screen and (max-width: 47em) {
-		.mic-access-tool-general-button {
-			> div {
-				span {
-					display: none;
-				}
-			}
-		}
 		.mic-disable-buttons {
 			display: none;
 		}
@@ -386,8 +349,8 @@ body.mic-toolbox-contrast-monochrome {
 }
 
 // CONTRAST WHITE
-body.mic-toolbox-contrast-soft, 
-body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool), 
+body.mic-toolbox-contrast-soft,
+body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool),
 body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool) *:not(img), {
 	color: Black !important;
   background: transparent !important;
@@ -404,7 +367,7 @@ body.mic-toolbox-contrast-hard > :not(#mic-init-access-tool) {
 body.mic-toolbox-disable-buttons-animations * {
 	transition-property: none !important;
 	animation: none !important;
-	animation-name: none !important;	
+	animation-name: none !important;
 }
 
 // KEYBOARD SERFING

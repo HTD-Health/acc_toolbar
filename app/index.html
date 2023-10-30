@@ -11,7 +11,7 @@
 	<!-- <script src="minjs/common.min.js"></script> -->
 
 	<!-- Production script -->
-	<script src="../acctoolbar/acctoolbar.min.js"></script> 
+	<script src="./minjs/common.min.js"></script>
 
 	<!-- CDN -->
 	<!-- <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script> -->
@@ -44,9 +44,8 @@
 <script>
 	window.onload = function() {	
   window.micAccessTool = new MicAccessTool({
-  	forceLang: "ru-RU",
-  	link: 'https://acctoolbar.ml',
-    contact: 'mailto:mickidum@gmail.com'
+    reportLink: 'https://msu.co1.qualtrics.com/jfe/form/SV_6S9MV7pPpoqFwTY',
+    link: `${window.location.origin}/accessibility-statement`
   });
 };
 
