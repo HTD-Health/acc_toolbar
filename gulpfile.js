@@ -1,6 +1,6 @@
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
-		gulpSass           = require('gulp-sass')(require('sass')),
+		gulpSass       = require('gulp-sass')(require('sass')),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
@@ -9,8 +9,8 @@ var gulp           = require('gulp'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer').default,
 		notify         = require("gulp-notify"),
-		fileinclude 	 = require('gulp-file-include'),
-		htmlmin 	 		 = require('gulp-htmlmin'),
+		fileinclude    = require('gulp-file-include'),
+		htmlmin 	   = require('gulp-htmlmin'),
 		rimraf         = require("rimraf");
 
 function minifyHtml(cb) {
