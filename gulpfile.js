@@ -1,16 +1,16 @@
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
-		gulpSass           = require('gulp-sass'),
+		gulpSass       = require('gulp-sass')(require('sass')),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
 		cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
 		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
+		autoprefixer   = require('gulp-autoprefixer').default,
 		notify         = require("gulp-notify"),
-		fileinclude 	 = require('gulp-file-include'),
-		htmlmin 	 		 = require('gulp-htmlmin'),
+		fileinclude    = require('gulp-file-include'),
+		htmlmin 	   = require('gulp-htmlmin'),
 		rimraf         = require("rimraf");
 
 function minifyHtml(cb) {
@@ -57,7 +57,7 @@ function sass(cb) {
 	.pipe(gulpSass({
 		outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 2 versions']))
+	.pipe(autoprefixer({overrideBrowserslist:['last 2 versions']}))
 	.pipe(cleanCSS()) // comment on debug
 	.pipe(gulp.dest('app/css'))
 	setTimeout(() => cb(), 100);
@@ -73,7 +73,7 @@ function files(cb) {
 		.pipe(gulp.dest('acctoolbar'));
 		gulp.src([
 			'app/cursors/**/*',
-			]).pipe(gulp.dest('acctoolbar/cursors'));
+			], { encoding: false }).pipe(gulp.dest('acctoolbar/cursors'));
 		cb();
 	}, 500);
 }
